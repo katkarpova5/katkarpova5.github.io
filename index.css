@@ -7,6 +7,7 @@
     font-size: 25px;
     padding: 15px;
     border-bottom: 2px solid black;
+    z-index: 1001;
 }
 
 .menu-right {
@@ -170,4 +171,54 @@ body {
 
 .logo-text {
     vertical-align: middle;
+}
+
+.item-window {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-content {
+    width: 60%;
+    min-width: 500px;
+    background: white;
+    padding: 15px;
+    position: relative;
+}
+
+.item-close {
+    width: 30px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    cursor: pointer;
+}
+
+.item-close:hover {
+    opacity: 0.7;
+}
+
+.item-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-img {
+    width: 400px;
+}
+
+.item-header {
+    text-align: center;
+}
+.item-text p {
+    height: 300px;
+    overflow-y: scroll;
 }
