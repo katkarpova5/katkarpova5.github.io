@@ -8,23 +8,29 @@ function hamburgerClick() {
     }
 }
 
-function moreClick() {
-    event.preventDefault();
-
-    var itemWindow = document.getElementsByClassName("item-window")[0];
-    var display = itemWindow.style.display;
-    if (display == "") {
-        itemWindow.style.display = "flex";
-    } else {
-        itemWindow.style.display = "";
-    }
+function moreClick(card) {
+    $(".item-window"+card).fadeIn();
+    $(".item-window"+card).css("display", "flex");
 }
 
 var hamburgerIcon = document.getElementsByClassName("menu-icon")[0];
 hamburgerIcon.addEventListener("click", hamburgerClick);
 
-var moreIcon = document.getElementsByClassName("card-button")[1];
-moreIcon.addEventListener("click", moreClick);
+$('.card-button.one').click(
+    function () {
+        moreClick(".one")
+    }
+)
 
-var closeIcon = document.getElementsByClassName("item-close")[0];
-closeIcon.addEventListener("click", moreClick);
+$('.card-button.two').click(
+    function () {
+        moreClick(".two")
+    }
+)
+
+
+$('.item-close').click(
+    function() {
+        $(".item-window").fadeOut();
+    }
+)

@@ -95,7 +95,7 @@ body {
     width: fit-content;
     margin: auto;
     border-radius: 15px;
-
+    cursor: pointer;
 }
 
 .card-button:hover {
